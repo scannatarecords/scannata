@@ -21,9 +21,7 @@ CSS STRUCTURE:
 
 --------------------------------------------------------------*/
 body {
-
-  background-color: #f0ece5;
-
+  background-color: #ffffff;
 
   --heading-font: "Abril Fatface", serif;
   --heading-font-weight: 400;
@@ -32,7 +30,7 @@ body {
 
   --swiper-theme-color: var(--bs-primary);
 
-  --custom-easing: cubic-bezier(.17, .67, .83, .67);
+  --custom-easing: cubic-bezier(0.17, 0.67, 0.83, 0.67);
 
   /* bootstrap */
   --bs-body-font-family: "Poppins", sans-serif;
@@ -42,12 +40,11 @@ body {
   --bs-body-color: #222222;
   --bs-body-color-rgb: 143, 143, 143;
 
-
-  --bs-primary: #351915;
-  --bs-primary-dark: #520a00;
-  --bs-secondary: #f0ece5;
+  --bs-primary: #000000;
+  --bs-primary-dark: #ac2e1d;
+  --bs-secondary: #c0954a;
   --bs-black: #111;
-  --bs-light: #F1F1F0;
+  --bs-light: #ffffff;
   --bs-dark: #212529;
   --bs-gray: #9aa1a7;
   --bs-gray-dark: #51565b;
@@ -94,10 +91,8 @@ a {
   transition: all 0.3s ease-out;
 }
 
-
 /* - Section Padding
 --------------------------------------------------------------*/
-
 
 .padding-small {
   padding-top: 2em;
@@ -114,9 +109,7 @@ a {
   padding-bottom: 6em;
 }
 
-
 @media only screen and (max-width: 768px) {
-
   .padding-small,
   .padding-medium,
   .padding-large {
@@ -219,15 +212,15 @@ a {
 /* form control */
 .form-control:focus {
   border-color: #ccc;
-  box-shadow: 0 0 0 0.25rem rgba(200, 200, 200, .25);
+  box-shadow: 0 0 0 0.25rem rgba(200, 200, 200, 0.25);
 }
 
 /* dark theme */
-[data-bs-theme=dark] {
+[data-bs-theme="dark"] {
   color-scheme: dark;
 
   --heading-color: #fff;
-  --bs-link-color: #CCCCCC;
+  --bs-link-color: #cccccc;
   --bs-link-hover-color: var(--bs-primary);
   --bs-link-color-rgb: 204, 204, 204;
   --bs-link-hover-color-rgb: 131, 169, 172;
@@ -236,13 +229,13 @@ a {
   --bs-body-bg-rgb: 17, 17, 41;
 }
 
-[data-bs-theme=dark] .dropdown-item {
+[data-bs-theme="dark"] .dropdown-item {
   --bs-dropdown-link-color: var(--bs-light);
   --bs-dropdown-link-hover-color: var(--bs-white);
 }
 
-[data-bs-theme=dark] .bg-white,
-[data-bs-theme=dark] .bg-light {
+[data-bs-theme="dark"] .bg-white,
+[data-bs-theme="dark"] .bg-light {
   --bs-bg-opacity: 0.1;
 }
 
@@ -254,7 +247,6 @@ a {
 #filters a.is-checked {
   color: var(--bs-dark);
 }
-
 
 /*----- 6.2 Header
 --------------------------------------------------------------*/
@@ -290,23 +282,23 @@ a {
   opacity: 0;
 }
 
-#menu-toggle:checked~.menu-btn>span {
+#menu-toggle:checked ~ .menu-btn > span {
   transform: rotate(45deg);
 }
 
-#menu-toggle:checked~.menu-btn>span::before {
+#menu-toggle:checked ~ .menu-btn > span::before {
   top: 0;
   transform: rotate(0);
   background: var(--bs-dark);
 }
 
-#menu-toggle:checked~.menu-btn>span::after {
+#menu-toggle:checked ~ .menu-btn > span::after {
   top: 0;
   transform: rotate(90deg);
   background: var(--bs-dark);
 }
 
-#menu-toggle:checked~.navmenu {
+#menu-toggle:checked ~ .navmenu {
   visibility: visible;
   right: 0;
 }
@@ -324,30 +316,30 @@ a {
   margin: 12px;
 }
 
-.menu-btn>span,
-.menu-btn>span::before,
-.menu-btn>span::after {
+.menu-btn > span,
+.menu-btn > span::before,
+.menu-btn > span::after {
   display: block;
   position: absolute;
   width: 100%;
   height: 2px;
   background-color: var(--bs-dark);
-  transition-duration: .25s;
+  transition-duration: 0.25s;
 }
 
-.menu-btn.light>span,
-.menu-btn.light>span::before,
-.menu-btn.light>span::after {
+.menu-btn.light > span,
+.menu-btn.light > span::before,
+.menu-btn.light > span::after {
   background-color: var(--bs-dark);
 }
 
-.menu-btn>span::before {
-  content: '';
+.menu-btn > span::before {
+  content: "";
   top: -8px;
 }
 
-.menu-btn>span::after {
-  content: '';
+.menu-btn > span::after {
+  content: "";
   top: 8px;
 }
 
@@ -368,10 +360,15 @@ a {
   background: var(--bs-primary);
   border-bottom-left-radius: 200%;
   z-index: -1;
-  -webkit-transition: -webkit-transform cubic-bezier(0.77, 0, 0.175, 1) 0.6s, border-radius linear 0.8s;
-  transition: -webkit-transform cubic-bezier(0.77, 0, 0.175, 1) 0.6s, border-radius linear 0.8s;
-  transition: transform cubic-bezier(0.77, 0, 0.175, 1) 0.6s, border-radius linear 0.8s;
-  transition: transform cubic-bezier(0.77, 0, 0.175, 1) 0.6s, -webkit-transform cubic-bezier(0.77, 0, 0.175, 1) 0.6s, border-radius linear 0.8s;
+  -webkit-transition: -webkit-transform cubic-bezier(0.77, 0, 0.175, 1) 0.6s,
+    border-radius linear 0.8s;
+  transition: -webkit-transform cubic-bezier(0.77, 0, 0.175, 1) 0.6s,
+    border-radius linear 0.8s;
+  transition: transform cubic-bezier(0.77, 0, 0.175, 1) 0.6s,
+    border-radius linear 0.8s;
+  transition: transform cubic-bezier(0.77, 0, 0.175, 1) 0.6s,
+    -webkit-transform cubic-bezier(0.77, 0, 0.175, 1) 0.6s,
+    border-radius linear 0.8s;
   -webkit-transform: translateX(100%) translateY(-100%);
   transform: translateX(100%) translateY(-100%);
 }
@@ -383,8 +380,8 @@ a {
 }
 
 .nav-overlay:before {
-  -webkit-transition-delay: .2s;
-  transition-delay: .2s;
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
 }
 
 .nav__content {
@@ -419,7 +416,7 @@ a {
   line-height: 1.15;
   margin-top: 0;
   margin-bottom: 0;
-  transition: color .3s ease;
+  transition: color 0.3s ease;
 }
 
 .nav__list-item a {
@@ -482,8 +479,8 @@ body.nav-active .nav-overlay:after {
 }
 
 body.nav-active .nav-overlay:after {
-  -webkit-transition-delay: .1s;
-  transition-delay: .1s;
+  -webkit-transition-delay: 0.1s;
+  transition-delay: 0.1s;
 }
 
 body.nav-active .nav-overlay:before {
@@ -495,10 +492,12 @@ body.nav-active .nav__list-item {
   opacity: 1;
   -webkit-transform: translateX(0%);
   transform: translateX(0%);
-  -webkit-transition: opacity .3s ease, color .3s ease, -webkit-transform .3s ease;
-  transition: opacity .3s ease, color .3s ease, -webkit-transform .3s ease;
-  transition: opacity .3s ease, transform .3s ease, color .3s ease;
-  transition: opacity .3s ease, transform .3s ease, color .3s ease, -webkit-transform .3s ease;
+  -webkit-transition: opacity 0.3s ease, color 0.3s ease,
+    -webkit-transform 0.3s ease;
+  transition: opacity 0.3s ease, color 0.3s ease, -webkit-transform 0.3s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease, color 0.3s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease, color 0.3s ease,
+    -webkit-transform 0.3s ease;
 }
 
 body.nav-active .nav__list-item:nth-child(0) {
@@ -607,7 +606,6 @@ header {
   opacity: 0.4;
 }
 
-
 /* contact image  */
 .contact-image {
   margin-bottom: 0;
@@ -615,7 +613,7 @@ header {
   text-align: right;
 }
 
-@media screen and (max-width:767px) {
+@media screen and (max-width: 767px) {
   .contact-detail {
     overflow: hidden;
   }
